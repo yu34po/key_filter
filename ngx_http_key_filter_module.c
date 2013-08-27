@@ -236,11 +236,6 @@ static ngx_int_t ngx_http_key_match_process(ngx_http_request_t* r, ngx_buf_t* b)
             }
             if(kmp_search(l, k))
                 return NGX_OK;
-      /*      temp = (char*) l + len - k_len;
-            for(pos = (char*)l; pos <= temp; pos++){
-                if(pos[0] == k[0] && memcmp(pos, k, k_len) == 0)
-                    return NGX_OK;
-            }*/
        }
        return NGX_DECLINED;
 }
